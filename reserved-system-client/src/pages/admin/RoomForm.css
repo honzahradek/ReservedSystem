@@ -1,0 +1,31 @@
+/* Smooth transition between creating and editing modes */
+.transition-all {
+  transition: all 0.4s ease-in-out;
+}
+
+/* Visual style applied when an existing reservation is being edited */
+.editing-mode {
+  background-color: #fff4e6; /* soft orange highlight */
+  border-color: #ffa94d;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
+  animation: pulseEdit 1s ease-in-out;
+}
+
+/* Visual style applied when creating a new reservation */
+.creating-mode {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* Subtle pulse animation when switching into edit mode */
+@keyframes pulseEdit {
+  0% {
+    box-shadow: 0 0 0 rgba(255, 165, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 165, 0, 0.2);
+  }
+}
